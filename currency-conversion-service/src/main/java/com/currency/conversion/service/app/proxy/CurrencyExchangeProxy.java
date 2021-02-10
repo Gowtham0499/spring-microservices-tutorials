@@ -10,7 +10,7 @@ import com.currency.conversion.service.app.model.CurrencyConversion;
 @FeignClient(name = "forex-api")
 public interface CurrencyExchangeProxy {
 	
-	@GetMapping("/forex-rates/from/{from}/to/{to}")
+	@GetMapping("/forex-api/from/{from}/to/{to}")
 	public CurrencyConversion getForexExchangeRate(@PathVariable String from, @PathVariable String to);
 
 }
