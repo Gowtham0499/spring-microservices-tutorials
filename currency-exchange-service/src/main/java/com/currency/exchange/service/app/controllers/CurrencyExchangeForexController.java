@@ -18,7 +18,7 @@ public class CurrencyExchangeForexController {
 	@Autowired
 	private CurrencyExchangeRepository repository;
 	
-	@GetMapping("/forex-rates/from/{from}/to/{to}")
+	@GetMapping("/forex-api/from/{from}/to/{to}")
 	public CurrencyExchange retrieveForexRates(@PathVariable String from, @PathVariable String to) {
 		CurrencyExchange currencyExchange = repository.findByFromAndTo(from, to);
 		
